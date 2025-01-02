@@ -145,7 +145,7 @@ body{
   padding-top: 40px; 
 }
 
-.FirstElement .profile-photo{
+/* .FirstElement .profile-photo{
   width: 300px;
   height:  300px;
   border-radius: 50%;
@@ -160,7 +160,34 @@ profile-photo .img{
 }
 .FirstElement .profile-photo img:hover{
   transform: scale(1.2);
+} */
+
+.FirstElement .profile-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 15px solid #444444;
+  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+  /* Add this to make the container a flex container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Fix the selector (removed space between profile-photo and img) */
+.profile-photo img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+  /* Add this to ensure the image maintains its aspect ratio */
+  object-fit: cover;
+}
+
+.FirstElement .profile-photo img:hover {
+  transform: scale(1.2);
+}
+
 .profile-text{
   max-width: 750px;
   display: flex;
@@ -396,22 +423,23 @@ profile-photo .img{
 .project-title p{
   color: #e5e5e5;
 }
-.projects{
+.projects {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 30px; /* Add space between rows */
 }
-.project{
-    /* padding: 30px 15px; */
-    color: #e5e5e5;
-    border: 2px solid #e5e5e5;
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-    padding: 25px;
-    text-align: center;
-    flex-basis: 32%;
-    transition: .3s;
+
+.project {
+  color: #e5e5e5;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  width: 48%; /* Change from flex-basis to width */
+  position: relative;
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 30px; /* Add space between projects */
+  transition: .3s;
 }
 .project i{
   background-color: #0071e3;
