@@ -292,8 +292,7 @@ profile-photo .img{
 .education-content .row{
   display: flex;
   border-radius: 5px;
-  width: 135%;
-  /* height: 400px; */
+  width: 100%;  /* Fixed width to prevent overflow */
   margin-bottom: 100px;
 }
 
