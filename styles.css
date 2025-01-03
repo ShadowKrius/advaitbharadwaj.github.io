@@ -27,9 +27,9 @@ body{
   line-height:24px; 
   background-color:#000000;
 }
-.container{
-  width: 1170px;
-  margin:auto;
+.container {
+  width: min(1170px, 90%); /* This makes it responsive while maintaining max width */
+  margin: 0 auto;
 }
 
 
@@ -291,8 +291,6 @@ profile-photo .img{
 
 .education-content {
   width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
 }
 
 /* .education-content .row{
@@ -304,10 +302,11 @@ profile-photo .img{
 
 .education-content .row {
   display: flex;
-  border-radius: 5px;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 100px;
-  gap: 30px; /* This adds space between education and internship columns */
+  gap: 40px; /* Space between columns */
 }
 
 .education-content .title{
@@ -325,9 +324,10 @@ profile-photo .img{
 .education-content .row .education,
 .education-content .row .internship {
   color: #e5e5e5;
-  flex: 1; /* This makes both columns take up equal space */
-  max-width: none; /* Remove the max-width restriction */
+  width: 100%;
+  flex: 1;
   margin-top: 30px;
+  padding: 0;
 }
 
 .education-content  h3.title{
@@ -339,9 +339,8 @@ profile-photo .img{
   flex:0 0 100%;
   max-width: 100%;  
 }
-.education-content .row .timeline{
-  /* background-color:#e5e5e5; */
-  padding: 30px 15px;
+.education-content .row .timeline {
+  padding: 30px 25px;
   border: 1px solid #e5e5e5;
   border-radius: 10px;
   width: 100%;
@@ -388,10 +387,11 @@ profile-photo .img{
   font-size: 18px;
   /* margin-bottom: 8px; */
 }
-.education-content .row .timeline-text{
+.education-content .row .timeline-text {
   line-height: 25px;
   font-size: 16px;
   text-align: justify;
+  width: 100%;
 }
 
 .education-content .row .timeline-item .date-title {
